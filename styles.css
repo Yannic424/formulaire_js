@@ -1,0 +1,359 @@
+body {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    color: rgb(195, 195, 195);
+    background-image: url('darkdemin.png'), linear-gradient(to right top, #02060f, #090c12, #1a222f, #141517, #181819);
+    background-repeat: repeat, no-repeat;
+    background-attachment: fixed;
+    background-size: 20%, auto;
+    filter: invert(0);
+    padding: 0;
+    margin: 0;
+}
+
+h1 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    line-height: 1;
+    color: #ffffff;
+    font-size: 50px;
+    text-shadow: 10px 5px 10px rgba(14, 12, 3, 1);
+    font-weight: bold;
+}
+
+#formulaire {
+    position: relative;
+    max-width: 420px;
+    margin: 50px auto;
+    padding: 20px;
+    background-image: linear-gradient(to right, #02060f, #111318, #141518, #1a1a1b, #171717);
+    border: 1px solid rgb(37, 37, 37);
+    border-radius: 12px;
+    box-shadow: 1px 0 2px 4px rgba(0, 0, 0, .4);
+    padding: 30px;
+    box-sizing: border-box;
+}
+
+#formulaire::before {
+    content: "";
+    position: absolute;
+    top: -17px;
+    left: -13px;
+    right: -13px;
+    bottom: -17px;
+    background: linear-gradient(to right top, #02060f, #202329, #505053, #616161, #212021, #303030);
+    z-index: -1;
+    box-shadow: -5px -8px 20px rgba(0, 0, 0, .2);
+    ;
+    border-radius: 20px;
+
+
+}
+
+#formulaire::after {
+    content: "";
+    position: absolute;
+    top: -20px;
+    left: -20px;
+    right: -20px;
+    bottom: -20px;
+    background: linear-gradient(to right top, #1b4dc2, #202329, rgb(134, 134, 134), #3b3b3b, #000000, #303030);
+    z-index: 10;
+    box-shadow: -5px -8px 20px rgba(0, 0, 0, .2);
+    ;
+    border-radius: 20px;
+    transform-origin: center;
+    transform: scaleX(86%) scaleY(91%);
+    opacity: .15;
+    pointer-events: none;
+}
+
+fieldset {
+    height: 80px;
+    margin-bottom: 10px;
+    border: 1px solid #c1c0c0;
+    border-radius: 8px;
+}
+
+fieldset:hover {
+    background-color: #1c1b1b;
+    transition: .2s;
+}
+
+legend {
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+input[type="email"],
+input[type="text"],
+input[type="password"] {
+    width: calc(100% - 32px);
+    padding: 12px;
+    margin-bottom: 10px;
+    border: 1px solid #555555;
+    border-radius: 5px;
+    box-sizing: border-box;
+    transition: border-color 0.3s ease;
+    position: relative;
+    caret-color: white;
+}
+
+input[type="email"]::placeholder,
+input[type="text"]::placeholder,
+input[type="password"]::placeholder {
+    color: #999;
+}
+
+[id^="alerte"] {
+    color: orangered;
+    font-size: 14px;
+    margin-top: -2px;
+}
+
+input[type="email"],
+input[type="text"],
+input[type="password"] {
+    background-color: rgb(51, 51, 51);
+    color: white;
+    height: 30px;
+}
+
+input[type="submit"] {
+    font-size: 1.5em;
+    width: 100%;
+    padding: 10px;
+    background-color: #007bff;
+    color: #fff;
+    border: 2px solid #0536b4;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    padding: 20px;
+}
+
+input[type="submit"]:hover {
+    background-color: #0056b3;
+}
+
+.input-with-color {
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+[id^="color-square"] {
+    margin-bottom: 10px;
+    width: 20px;
+    height: 20px;
+    background-color: #0d0e14;
+    border: 5px solid rgb(57, 57, 57);
+    border-radius: 3px;
+    margin-left: 10px;
+    background-image: url('bo-play.png');
+    background-blend-mode: overlay;
+    background-size: 70%;
+
+}
+
+#regexMdp {
+    font-size: .88rem;
+    font-weight: normal;
+}
+
+#libele {
+    text-align: center;
+    margin-top: -6px;
+    margin-bottom: -10px;
+    font-size: .8em;
+}
+
+#libele a {
+    color: white;
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+.input-icon {
+    position: relative;
+    display: inline-block;
+}
+
+.eye-icon {
+    position: absolute;
+    right: 45px;
+    transform: translateY(-12%);
+    cursor: pointer;
+    filter: invert(.6);
+}
+
+input:focus {
+    outline: 2px solid #007bff;
+}
+
+@media screen and (max-width: 768px) {
+    section {
+        transform: scale(100%);
+    }
+
+    #bandeau-noir {
+        visibility: hidden;
+    }
+}
+
+.invert {
+    filter: invert(0);
+}
+
+.wobble {
+    animation: wobble .3s linear;
+    animation-iteration-count: 1;
+    filter: invert(1);
+}
+
+@keyframes wobble {
+
+    0%,
+    100% {
+        transform: translateX(0);
+    }
+
+    10%,
+    30%,
+    50%,
+    70% {
+        transform: translateX(-5px);
+    }
+
+    20%,
+    40%,
+    60% {
+        transform: translateX(5px);
+    }
+
+    80% {
+        transform: translateX(1px);
+    }
+
+    90% {
+        transform: translateX(-1px);
+    }
+}
+
+.toast {
+    animation: toast .3s linear;
+    overflow: hidden;
+    max-height: 20px;
+}
+
+@keyframes toast {
+    0% {
+        opacity: 0;
+        transform: translateY(15px);
+    }
+
+    40% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0px);
+    }
+}
+
+.led {
+
+    animation: led 1.8s linear infinite;
+}
+
+@keyframes led {
+    0% {
+        opacity: 1;
+        filter: brightness(100%);
+    }
+
+    20% {
+        opacity: 0.8;
+        filter: brightness(97%);
+    }
+
+    30% {
+        opacity: 1;
+        filter: brightness(100%);
+    }
+
+    50% {
+        opacity: .8;
+    }
+
+    80% {
+        opacity: 1;
+        filter: brightness(100%);
+    }
+
+    90% {
+        opacity: .9;
+        filter: brightness(108%);
+    }
+
+    100% {
+        opacity: 1;
+        filter: brightness(100%);
+    }
+}
+
+#bandeau-noir {
+    position: fixed;
+    top: -33.5px;
+    left: 0;
+    width: 10%;
+    height: 100vh;
+    background-color: black;
+    opacity: 0.7;
+    z-index: 1000;
+}
+
+#bandeau-noir::after {
+    content: "";
+    position: fixed;
+    top: -33.5px;
+    left: 90%;
+    width: 10%;
+    height: 100vh;
+    background-color: black;
+    opacity: 0.7;
+    z-index: 1000;
+}
+
+
+
+#grille {
+    margin-top: 18px;
+    width: 348px;
+    height: 20px;
+    background-color: rgb(32, 32, 32);
+    background-image: url(bo-play.png);
+    background-size: 5%;
+    filter: brightness(120%);
+    border: 4px ridge rgb(0, 0, 0);
+    border-radius: 10px;
+    position: relative;
+}
+
+#grille::before {
+    content: "";
+    width: 0px;
+    height: 0px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%) scaleY(5%) scaleX(120%);
+    border-radius: 50%;
+    box-shadow: 0 0 50px 100px rgba(220, 220, 220, 0.3);
+    mix-blend-mode: soft-light;
+    background-blend-mode: multiply;
+    animation: led 1s linear infinite;
+}

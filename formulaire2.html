@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Formulaire | Javascript</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+    <div id="bandeau-noir"></div>
+    <h1 id="titre">FORMULAIRE-connexion</h1>
+
+    <section>
+        <form action="controle_user.php" method="get" name="formulaire" id="formulaire">
+
+
+
+
+            <!-- <fieldset>
+                <legend>Pseudo</legend>
+                <div class="input-with-color">
+                    <input type="text" name="user_pseudo" id="user_nom" placeholder="JohnDoe" class="input" />
+                    <div id="color-square-nom"></div>
+                </div>
+                <p id="alerteNom"></p>
+            </fieldset> -->
+
+            <fieldset>
+                <legend>Adresse e-mail</legend>
+                <div class="input-with-color">
+                    <input type="text" name="user_mail" id="user_mail" placeholder="john.doe@email.com" focus
+                        class="input" />
+                    <div id="color-square-mail"></div>
+                </div>
+                <p id="alerteMail"></p>
+            </fieldset>
+
+            <!-- <fieldset>
+                <legend>Prénom</legend>
+                <div class="input-with-color">
+                    <input type="text" name="user_prenom" id="user_prenom" placeholder="John" class="input" />
+                    <div id="color-square-prenom"></div>
+                </div>
+                <p id="alertePrenom"></p>
+            </fieldset> -->
+
+            <fieldset>
+                <legend>Mot de passe :</legend>
+                <div class="input-with-color">
+                    <input type="password" name="user_pwd1" id="pwd1" class="input" placeholder="Votre mot de passe" />
+                    <span id="togglePwd1" class="eye-icon"><img id="eye-icon1"
+                            src="visibility_off_FILL0_wght400_GRAD0_opsz24.svg" alt=""></span>
+
+                    <div id="color-square-pwd1"></div>
+                </div>
+                <p id="alertePwd1"></p>
+            </fieldset>
+
+            <!-- <fieldset>
+                <legend>Confirmation mot de passe :</legend>
+                <div class="input-with-color">
+                    <input type="password" name="user_pwd2" id="pwd2" class="input"
+                        placeholder="Confirmer le mot de passe" />
+                    <span id="togglePwd2" class="eye-icon"><img id="eye-icon2"
+                            src="visibility_off_FILL0_wght400_GRAD0_opsz24.svg" alt=""></span>
+                    <div id="color-square-pwd2"></div>
+                </div>
+                <p id="alertePwd2"></p>
+            </fieldset> -->
+
+            <div id="grille"></div>
+
+            <!-- <p id="regexMdp">IMPORTANT : Votre mot de passe doit contenir au moins 8 caractères, incluant au moins
+                une
+                lettre
+                minuscule, une
+                lettre majuscule, un
+                chiffre et un caractère spécial (!,@,#,$,%,^,&,*,+).</p> -->
+
+            <input type="submit" value="Envoyer" name="valider" id="valider" />
+            <p id="libele"><a href="./formulaire.html">Vous n'avez-pas encore de compte ?</a></p>
+        </form>
+    </section>
+
+
+
+    <script src="controle.js"></script>
+    <script src="testuser.jss"></script>
+</body>
+
+</html>
